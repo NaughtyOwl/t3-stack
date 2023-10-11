@@ -1,0 +1,22 @@
+ .pagination {
+    display: flex;
+    list-style: none;
+    outline: none;
+  }
+  
+  .pagination__link {
+    padding: 8px 16px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .pagination__link--disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  .pagination__link--active {
+    font-weight: bold;
+    color: blue;
+  }
+  

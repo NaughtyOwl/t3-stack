@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+
+  mysql:
+    image: mysql:latest
+    container_name: dev-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: lakers
+      MYSQL_DATABASE: dev_budget_tracker
+      MYSQL_USER: la
+      MYSQL_PASSWORD: lakers
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+      - mysql_data:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+volumes:
+  mysql_data:
